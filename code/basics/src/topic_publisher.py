@@ -16,7 +16,7 @@ from std_msgs.msg import Int32
 rospy.init_node('topic_publisher')
 
 # BEGIN PUB
-pub = rospy.Publisher('counter', Int32)
+pub = rospy.Publisher('counter', Int32, queue_size=10)
 # END PUB
 
 # BEGIN LOOP
@@ -25,6 +25,7 @@ rate = rospy.Rate(2)
 count = 0
 while not rospy.is_shutdown():
     pub.publish(count)
+    print "sending count: ", count
     count += 1
     rate.sleep()
 # END LOOP

@@ -1,4 +1,10 @@
-<launch>
+<!--<launch>
   <node name="talker" pkg="rospy_tutorials" type="talker" />
   <node name="listener" pkg="rospy_tutorials" type="listener" />
+</launch>
+-->
+
+<launch>
+  <node name="talker" pkg="rosbook" type="topic_publisher.py" output="screen"/>
+  <node name="listener" pkg="rosbook" type="topic_subscriber.py" output="screen"/>
 </launch>

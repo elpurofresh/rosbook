@@ -9,7 +9,7 @@ from std_msgs.msg import Int32
 
 # BEGIN CALLBACK
 def callback(msg):
-    print msg.data
+    print "received: ", msg.data
 # END CALLBACK
 
 
