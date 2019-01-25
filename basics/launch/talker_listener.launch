@@ -1,0 +1,4 @@
+<launch>
+  <node name="talker" pkg="rosbook_basics" type="topic_publisher.py" output="screen"/>
+  <node name="listener" pkg="rosbook_basics" type="topic_subscriber.py" output="screen"/>
+</launch>
